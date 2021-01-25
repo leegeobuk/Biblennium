@@ -1,0 +1,14 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "Image": {
+    "Name": "leegeobuk/biblennium:1.3",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8080"
+    }
+  ],
+  "Logging": "/var/log/biblennium",
+  "EntryPoint": ["java", "-jar", "/app.jar"]
+}

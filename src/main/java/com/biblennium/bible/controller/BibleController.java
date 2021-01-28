@@ -29,6 +29,7 @@ public class BibleController {
         Map<BibleBook, String> ot = bibleService.getOldTestamentList();
         Map<BibleBook, String> nt = bibleService.getNewTestamentList();
         BookListDTO bookListDTO = new BookListDTO(ot, nt);
+        System.out.println("Jenkins test");
         return ResponseEntity.ok(bookListDTO);
     }
 

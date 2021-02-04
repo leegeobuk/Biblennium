@@ -13,28 +13,28 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 import java.util.Collections;
 import java.util.List;
 
-@Profile("prod")
-@Configuration
-@EnableRedisRepositories
+//@Profile("prod")
+//@Configuration
+//@EnableRedisRepositories
 public class RedisConfig {
 
-    @Value("${spring.redis.host}")
-    private String redisHost;
-
-    @Value("${spring.redis.port}")
-    private int redisPort;
-
-    @Bean
-    public RedisConnectionFactory redisConnectionFactory() {
-        List<String> nodes = Collections.singletonList(redisHost + ":" + redisPort);
-        RedisClusterConfiguration clusterConfiguration = new RedisClusterConfiguration(nodes);
-        return new LettuceConnectionFactory(clusterConfiguration);
-    }
-
-    @Bean
-    public RedisTemplate<?, ?> redisTemplate() {
-        RedisTemplate<byte[], byte[]> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(redisConnectionFactory());
-        return redisTemplate;
-    }
+//    @Value("${spring.redis.host}")
+//    private String redisHost;
+//
+//    @Value("${spring.redis.port}")
+//    private int redisPort;
+//
+//    @Bean
+//    public RedisConnectionFactory redisConnectionFactory() {
+//        List<String> nodes = Collections.singletonList(redisHost + ":" + redisPort);
+//        RedisClusterConfiguration clusterConfiguration = new RedisClusterConfiguration(nodes);
+//        return new LettuceConnectionFactory(clusterConfiguration);
+//    }
+//
+//    @Bean
+//    public RedisTemplate<?, ?> redisTemplate() {
+//        RedisTemplate<byte[], byte[]> redisTemplate = new RedisTemplate<>();
+//        redisTemplate.setConnectionFactory(redisConnectionFactory());
+//        return redisTemplate;
+//    }
 }

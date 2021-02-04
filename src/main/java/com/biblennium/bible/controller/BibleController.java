@@ -22,7 +22,7 @@ import java.util.Map;
 public class BibleController {
 
     private final BibleService bibleService;
-    private final CachedBibleService cachedBibleService;
+//    private final CachedBibleService cachedBibleService;
 
     @GetMapping("/")
     public ResponseEntity<BookListDTO> getBookList() {

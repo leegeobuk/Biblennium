@@ -10,5 +10,5 @@
     }
   ],
   "Logging": "/var/log/biblennium",
-  "EntryPoint": ["java", "-jar", "/app.jar"]
+  "EntryPoint": ["java", "-jar", "-Dspring.profiles.active=prod", "/app.jar"]
 }

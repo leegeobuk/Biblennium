@@ -35,12 +35,12 @@ public class BibleController {
     @GetMapping("/script")
     public ResponseEntity<ScriptDTO> getScript(@RequestParam("b") String book,
                                                @RequestParam("c") int chapter) {
-        List<? extends Bible> cache = cachedBibleService.getScriptByChapter(book, chapter);
-        if (cache.size() > 0) {
-            return ResponseEntity.ok(new ScriptDTO(cache));
-        }
+//        List<? extends Bible> cache = cachedBibleService.getScriptByChapter(book, chapter);
+//        if (cache.size() > 0) {
+//            return ResponseEntity.ok(new ScriptDTO(cache));
+//        }
         List<? extends Bible> script = bibleService.getScriptByChapter(book, chapter);
-        cachedBibleService.cacheBible(script);
+//        cachedBibleService.cacheBible(script);
         return ResponseEntity.ok(new ScriptDTO(script));
     }
 }

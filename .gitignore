@@ -118,3 +118,4 @@ gradle-app.setting
 application-*.yml
 nkrv.sql
 개역개정.txt
+.idea
